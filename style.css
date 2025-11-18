@@ -1,0 +1,198 @@
+/* ---------- Reset + Base ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+/* Accessible hidden text for icons */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* ---------- Header ---------- */
+header {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.04);
+    padding: 18px 40px;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    gap: 36px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    transition: color .25s ease, text-shadow .25s ease;
+}
+
+nav a:hover {
+    color: #00ff80; /* Verde para hover */
+    text-shadow: 0 0 8px rgba(0, 255, 128, 0.6);
+}
+
+/* ---------- Home / Hero ---------- */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 8vw 80px 8vw;
+    min-height: 100vh;
+}
+
+.home-left {
+    max-width: 55%;
+}
+
+.nome {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    color: #00ff80; /* Verde */
+    margin-top: 20px;
+    text-shadow: 0 0 12px rgb(0, 189, 27);
+    margin-bottom: 10px;
+}
+
+.subnome {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    color: #fff;
+    border-right: 3px solid #ffffff;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    padding-right: 6px;
+    margin-bottom: 18px;
+}
+
+.home-cta {
+    margin-top: 20px;
+    display: flex;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    background: linear-gradient(180deg, rgba(0, 255, 128, 0.12), rgba(0, 255, 128, 0.06));
+    color: #fff;
+    border: 1px solid rgba(0, 255, 128, 0.28);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 255, 128, 0.12);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Hero image */
+.home-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    width: 460px;
+    max-width: 40vw;
+    border-radius: 88px;
+    margin-bottom: 50px;
+    filter: drop-shadow(0 0px 8px rgba(0, 255, 128));
+    opacity: 0.5;
+    transition: transform .45s ease, opacity .3s ease;
+}
+
+.hero-img:hover {
+    transform: translateY(-6px) scale(1.02);
+    opacity: 1;
+}
+
+/* ---------- Sections common ---------- */
+section {
+    padding: 80px 8vw;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.6rem, 2.6vw, 2.6rem);
+    color: #00ff80; /* Verde */
+    margin-bottom: 22px;
+    text-shadow: 0 0 8px rgb(0, 209, 20);
+}
+
+/* ---------- Sobre ---------- */
+.sobre-text {
+    max-width: 920px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 255, 128);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 50px;
+    box-shadow: 0 8px 30px rgba(0, 255, 128, 0.04);
+    text-align: justify;
+}
+
+/* ---------- Projetos (cards grid) ---------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+    margin-top: 28px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 255, 128, 0.04);
+    transition: transform .28s ease, box-shadow .28s ease;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
